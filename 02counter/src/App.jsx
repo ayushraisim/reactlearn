@@ -9,6 +9,17 @@ function App() {
   const addvalue = ()=>{
     //counter = counter +1;
     setCounter(counter+1) //above is correct too
+
+    //interviewers ask thing below which they do like they write it too many times
+    setCounter(counter+1) 
+    setCounter(counter+1) 
+    setCounter(counter+1) 
+    //all things above will be sent in batch because react send updates in batches as all are doing same work so they will be send in batches
+    //what if we have to use more than one ?
+    setCounter(prevCounter=>prevCounter+1);//prevcounter is written beecause previously updated value comes;
+     setCounter(prevCounter=>prevCounter+1);
+      setCounter(prevCounter=>prevCounter+1);
+      //so in callback it comnes when its updation is completed
   } 
   const decreasevalue = ()=>{
     if(counter==0) return;
