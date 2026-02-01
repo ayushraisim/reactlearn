@@ -11,9 +11,9 @@ function App() {
     setCounter(counter+1) //above is correct too
   } 
   const decreasevalue = ()=>{
+    if(counter==0) return;
     counter=counter -1;
-        setCounter(counter) //above is correct too
-
+    setCounter(counter) //above is correct too
   } 
 
   return (
